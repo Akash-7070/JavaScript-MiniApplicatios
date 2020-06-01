@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Akash_Kavade</title>
+</head>
+<body style="background-color: bisque">
+
+<h1 align="center" >Timer for 5 min Countdown</h1>
+<div style="margin: 80px">
+
+<h1 id="Demo" align="center"></h1>
+<h1 id="Demo1" align="center" style="color: blue"></h1>
+</div>
+
+<script type="text/javascript">
+
+    var x;
+	var counter= 0;
+	var timer= 300;
+
+	function convert(sm)
+	{
+		var min= Math.floor(sm/60);
+		var sec= sm%60;
+
+		if(sec == 0)
+		{
+			clearInterval(x);
+			document.getElementById("Demo1").innerHTML="Time Up";
+			document.getElementById("Demo").style.color="red";
+		}
+
+		return min+":"+sec;
+	}
+
+	function fun()
+	{
+		counter++;
+		document.getElementById("Demo").innerHTML=convert(timer-counter);
+	}
+
+	x=setInterval(fun,1000);
+
+</script>
+</body>
+</html>
+

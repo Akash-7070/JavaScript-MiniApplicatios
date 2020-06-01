@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Akash_Kavade</title>
+</head>
+<body style="background-color: bisque">
+
+<div style="margin-top: 90px" align="center">
+<input type="text" id="Demo2"><br><br>
+<input type="button" onclick="get()" value="Click Here">
+<h1 id="Demo1"></h1>
+</div>
+
+<script type="text/javascript">
+
+	function get()
+	{
+		var time= new Date();
+		var h= time.getHours();
+
+		var msg;
+	    
+	    if(h<12)
+	    {
+             msg="Good Morning";
+	    }
+
+	    else if(h>12 && h<16)
+	    {
+             msg="Good After Noon";
+	    }
+
+	    else
+	    {
+             msg="Good Evening";
+	    }
+
+		var name= document.getElementById("Demo2").value;
+        document.getElementById("Demo1").innerHTML= "Hello "+ name+" "+msg;
+	}
+
+</script>
+</body>
+</html>
+
