@@ -23,7 +23,7 @@
 		var min= Math.floor(sm/60);
 		var sec= sm%60;
 
-		if(sec == 0)
+		if(sec == 0 || min == 0)
 		{
 			clearInterval(x);
 			document.getElementById("Demo1").innerHTML="Time Up";
